@@ -25,7 +25,7 @@ public class PipeMiddleScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        logic.addScore();
+        logic.addScore(1);
         Debug.Log("+1");
 
     }
