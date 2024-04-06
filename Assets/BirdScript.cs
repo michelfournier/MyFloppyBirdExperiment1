@@ -11,6 +11,15 @@ public class BirdScript : MonoBehaviour
     public LogicScript logic;
     public bool birdIsAlive = true;
 
+    public int upperLimit = 15;
+    public int lowerLimit = -14;
+
+    public bool GetLivingStatus()
+
+        {
+            return birdIsAlive;
+        }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +30,17 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < lowerLimit || transform.position.y > upperLimit)
+        {
+            logic.gameOver();
+            birdIsAlive = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
             myRigidBody.velocity = Vector2.up * flapStrength;
         }
+
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,4 +48,6 @@ public class BirdScript : MonoBehaviour
         logic.gameOver();
         birdIsAlive = false;
     }
+
+
 }

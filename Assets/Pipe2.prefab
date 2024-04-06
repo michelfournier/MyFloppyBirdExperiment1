@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2573131476280167038}
   m_Layer: 0
   m_Name: pip2 bottom
-  m_TagString: Untagged
+  m_TagString: pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   deadZone: -45
+  birdy: {fileID: 0}
 --- !u!61 &2573131476280167038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -193,7 +194,7 @@ GameObject:
   - component: {fileID: 1923466902524528181}
   m_Layer: 0
   m_Name: pip2 top
-  m_TagString: Untagged
+  m_TagString: pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   deadZone: -45
+  birdy: {fileID: 0}
 --- !u!1 &8318898098196578661
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,3 +417,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logic: {fileID: 0}
+  moveSpeed: 5

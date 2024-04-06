@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PipeSpwaning : MonoBehaviour
@@ -11,27 +12,36 @@ public class PipeSpwaning : MonoBehaviour
     private float timer = 0;
     public float heightOffset = 10;
 
+    public bool birdIsDead = false;
+
+    public BirdScript birdy;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        birdy = GameObject.FindGameObjectWithTag("birdy").GetComponent<BirdScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
+        if (birdIsDead == false)
         {
-            timer += Time.deltaTime;
+            if (timer < spawnRate)
+            {
+                timer += Time.deltaTime;     
+            }
+            else 
+            {
+                spawnPipe();
+                timer = 0;
+            }
+                  
         }
-        else{
-            spawnPipe();
-            timer = 0;
-        }
-
     }
+               
     void spawnPipe()
     {
         float lowestPoint = transform.position.y - heightOffset;
