@@ -7,13 +7,10 @@ public class movingPipe : MonoBehaviour
     public float moveSpeed = 5;
     public float deadZone = -45;
 
-    //public bool birdIsDead = false;
-
-    //public BirdScript birdy;
     // Start is called before the first frame update
     void Start()
     {
-        //birdy = GameObject.FindGameObjectWithTag("birdy").GetComponent<BirdScript>();
+
     }
 
     // Update is called once per frame

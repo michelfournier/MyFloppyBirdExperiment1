@@ -11,18 +11,6 @@ public class LogicScript : MonoBehaviour
     public Text scoreText;
     public GameObject gameOverScreen;
 
-    public PipeSpwaning stopTheSpawning;
-
-    //public GameObject stopThePipes;
-
-
-    
-    public void Start()
-    {
-        stopTheSpawning = GameObject.FindGameObjectWithTag("spawner").GetComponent<PipeSpwaning>();
-        //stopThePipes = GameObject.FindGameObjectWithTag("pipe");
-        //Debug.Log(stopThePipes);
-    }
 
 
    
@@ -39,9 +27,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
-        gameOverScreen.SetActive(true);
-        stopTheSpawning.birdIsDead = true;
-        //stopThePipes.birdIsDead = true;       
+        gameOverScreen.SetActive(true);    
 
     }
 
