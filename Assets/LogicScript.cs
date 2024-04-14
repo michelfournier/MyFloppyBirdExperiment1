@@ -31,4 +31,9 @@ public class LogicScript : MonoBehaviour
 
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }
